@@ -24,6 +24,7 @@ import java.util.stream.Collectors;
 public class DockerApi implements DockerConnection
 {
     private static final String GET_ALL_CONTAINERS_COMMAND = "docker ps -a --format \"{{.Names}}\" | tr '_' ' ' ";
+    private static final String GET_RUNNING_CONTAINERS_COMMAND = "docker ps --format \"{{.Names}} {{.Image}}\" | tr '_' ' ' ";
 
     private Container parseContainer(String containerInfo)
     {
@@ -98,6 +99,13 @@ public class DockerApi implements DockerConnection
     {
 
         return getContainers(request.getTargetEnvironment(), GET_ALL_CONTAINERS_COMMAND);
+
+    }
+
+    public Response getRunningContainers(Request request)
+    {
+
+        return getContainers(request.getTargetEnvironment(), GET_RUNNING_CONTAINERS_COMMAND);
 
     }
 
