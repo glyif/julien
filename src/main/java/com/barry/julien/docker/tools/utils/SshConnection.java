@@ -15,6 +15,13 @@ public class SshConnection
 
     private static final int PORT = 22;
 
+    /**
+     * getSession - starts new jsch session to connect to droplet
+     * @param environment
+     * @return
+     * @throws JulienException
+     */
+
     public static Session getSession(Environment environment) throws JulienException
     {
         String host = environment.getIp();
@@ -34,6 +41,21 @@ public class SshConnection
 
         }
     }
+
+    /**
+     * closeSession - closes the jsch session
+     * @param session
+     */
+
+    public static void closeSession(Session session) {
+        if (session != null) {
+            session.disconnect();
+        }
+    }
+
+
+
+
 
 
 }
