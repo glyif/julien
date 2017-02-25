@@ -1,0 +1,9 @@
+#!/bin/bash
+# This commands accepts 1 arg (image_name) and pushes it to DockerHub
+# "docker login" should be run first
+# $1 = name to assign to image you're pushing to DockerHub
+# DockerHub login=larrymadeo
+# DockerHub passwd= secret!
+# typical workflow = push from dev to DockerHub
+docker push larrymadeo/$1 
+
