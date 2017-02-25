@@ -1,0 +1,46 @@
+group 'com.barry'
+version '0.1'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.4'
+    }
+}
+
+apply plugin: 'com.github.johnrengelman.shadow'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+
+    compile('com.amazon.alexa:alexa-skills-kit:1.2') {
+        exclude group: 'joda-time'
+    }
+    compile 'com.amazonaws:aws-lambda-java-core:1.1.0'
+    compile 'com.amazonaws:aws-lambda-java-log4j:1.0.0'
+
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.16.12'
+
+    compile group: 'com.jcraft', name: 'jsch', version: '0.1.53'
+}
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'barry.julien',
+                'Implementation-Version': version,
+                'Built-By': System.getProperty('user.name'),
+                'Built-Date': new Date(),
+                'Built-JDK': System.getProperty('java.version')
+    }
+}
