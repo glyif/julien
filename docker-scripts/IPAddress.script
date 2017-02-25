@@ -1,2 +1,0 @@
-#!/bin/bash
-sudo docker inspect static-site | grep \"IPAddress\": | head -1
