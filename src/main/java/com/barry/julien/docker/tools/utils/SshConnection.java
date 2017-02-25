@@ -2,6 +2,7 @@ package com.barry.julien.docker.tools.utils;
 
 
 import com.barry.julien.docker.Environment;
+import com.barry.julien.docker.tools.exception.JulienException;
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.Session;
@@ -14,7 +15,7 @@ public class SshConnection
 
     private static final int PORT = 22;
 
-    public static Session getSession(Environment environment)
+    public static Session getSession(Environment environment) throws JulienException
     {
         String host = environment.getIp();
         String userName = environment.getUser();
@@ -29,7 +30,7 @@ public class SshConnection
             return (session);
         } catch (JSchException e)
         {
-            String.format("Missing connection to %s environment", environment);
+            throw new JulienException(String.format("Missing connection to %s environment", environment));
 
         }
     }
