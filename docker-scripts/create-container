@@ -1,0 +1,4 @@
+#!/bin/bash
+# this script creates a generic container with name $1 in env $2
+# proposed: env options "prod" "dev" or WHAT ELSE???
+sudo docker FILL IN SHIT HERE 
