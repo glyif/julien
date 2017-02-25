@@ -19,6 +19,62 @@
       ]
     },
     {
+      "intent": "CreateIntent",
+      "slots": [
+        {
+          "name": "TargetEnv",
+          "type": "ENV"
+        },
+        {
+          "name": "Container",
+          "type": "CONTAINER_NAME"
+        }
+      ]
+    },
+    {
+      "intent": "DeployIntent",
+      "slots": [
+        {
+          "name": "SourceEnv",
+          "type": "ENV"
+        },
+        {
+          "name": "TargetEnv",
+          "type": "ENV"
+        },
+        {
+          "name": "Container",
+          "type": "CONTAINER_NAME"
+        }
+      ]
+    },
+    {
+      "intent": "ShutdownIntent",
+      "slots": [
+        {
+          "name": "TargetEnv",
+          "type": "ENV"
+        },
+        {
+          "name": "Container",
+          "type": "CONTAINER_NAME"
+        }
+      ]
+    },
+    {
+      "intent": "RunIntent",
+      "slots": [
+        {
+          "name": "TargetEnv",
+          "type": "ENV"
+        },
+        {
+          "name": "Container",
+          "type": "CONTAINER_NAME"
+        }
+      ]
+    },
+    {
       "intent": "CheckerIntent"
     },
     {

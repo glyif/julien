@@ -8,16 +8,46 @@ ListIntent list docker containers on {TargetEnv} environment
 ListIntent list docker containers on {TargetEnv}
 ListIntent list all of my docker containers on {TargetEnv} environment
 ListIntent list all of my docker containers on {TargetEnv}
-ListIntent list all containers on {TargetEnv} environment
-ListIntent list all containers on {TargetEnv}
-ListIntent what containers exist on {TargetEnv}
-ListIntent list containers that exist on {TargetEnv}
-
 
 ListRunningIntent what containers are running on {TargetEnv}
 ListRunningIntent what containers are running on {TargetEnv} environment
 ListRunningIntent what containers do I have running on {TargetEnv}
 ListRunningIntent what containers do I have running on {TargetEnv} environment
+
+CreateIntent create container {Container} on {TargetEnv}
+CreateIntent create {Container} container on {TargetEnv}
+CreateIntent create a {Container} container on {TargetEnv}
+CreateIntent create a {Container} docker container on {TargetEnv}
+CreateIntent create a {Container} container on {TargetEnv} environment
+CreateIntent create a {Container} docker container on {TargetEnv} environment
+
+RunIntent run {Container} on {TargetEnv}
+RunIntent run {Container} container on {TargetEnv}
+RunIntent run {Container} docker container on {TargetEnv}
+RunIntent run {Container} container on my {TargetEnv} environment
+RunIntent run {Container} docker container on my {TargetEnv} environment
+RunIntent run container {Container} on {TargetEnv}
+RunIntent run container {Container} on {TargetEnv} environment
+RunIntent launch container {Container} on {TargetEnv}
+RunIntent launch container {Container} on {TargetEnv} environment
+RunIntent launch {Container} on {TargetEnv}
+RunIntent launch {Container} container on {TargetEnv}
+RunIntent launch {Container} docker container on {TargetEnv}
+RunIntent launch {Container} container on my {TargetEnv} environment
+RunIntent launch {Container} docker container on my {TargetEnv} environment
+
+DeployIntent deploy {Container} from {SourceEnv} to {TargetEnv}
+DeployIntent deploy {Container} from {SourceEnv} to {TargetEnv} environment
+DeployIntent deploy {Container} docker container from {SourceEnv} to {TargetEnv}
+DeployIntent deploy {Container} container from {SourceEnv} to {TargetEnv}
+DeployIntent deploy {Container} docker container from {SourceEnv} to {TargetEnv} environment
+DeployIntent deploy {Container} container from {SourceEnv} to {TargetEnv} environment
+
+ShutdownIntent shut down {Container} on {TargetEnv}
+ShutdownIntent shut down {Container} container on {TargetEnv}
+ShutdownIntent shut down {Container} docker container on {TargetEnv}
+ShutdownIntent shut down {Container} container on my {TargetEnv} environment
+ShutdownIntent shut down {Container} docker container on my {TargetEnv} environment
 
 CheckerIntent check question number 1
 CheckerIntent check question number 2
