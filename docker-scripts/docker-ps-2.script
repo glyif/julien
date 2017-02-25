@@ -1,0 +1,3 @@
+#!/bin/bash
+# this script prints two columns: #1 = docker assigned name, #2 = unique numeric ID
+sudo docker ps --format "{{.Names}}\t{{.ID}}" | tr '_' ' ' | grep -v NAMES  
