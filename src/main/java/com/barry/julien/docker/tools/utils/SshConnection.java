@@ -54,7 +54,7 @@ public class SshConnection
      * @param session
      */
 
-    public static void close_session(Session session) {
+    public static void closeSession(Session session) {
         if (session != null)
         {
             session.disconnect();
