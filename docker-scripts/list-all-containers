@@ -1,4 +1,4 @@
 #!/bin/bash
-# this script lists running containers, one name per line ex: determined_torvalds
+# this script lists ALL containers, one name per line ex: determined_torvalds
 # gotta make grep NAMES filter more airtight
 sudo docker ps --all --format "{{.Names}}" | tr '_' ' ' | grep -v NAMES  
