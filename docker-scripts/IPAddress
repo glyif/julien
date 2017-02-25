@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo docker inspect $1 | grep \"IPAddress\": | head -1 | cut -d ':' -f 2 | tr -d '\", '
