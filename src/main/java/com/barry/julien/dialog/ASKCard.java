@@ -16,6 +16,8 @@ public enum ASKCard
 
     GET_ALL_CONTAINERS("Getting all containers"),
 
+    GET_RUNNING_CONTAINERS("Get running containers"),
+
     HELP("Help");
 
 
