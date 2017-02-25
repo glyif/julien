@@ -1,5 +1,6 @@
 package com.barry.julien.handler.ask;
 
+import com.amazon.speech.speechlet.SpeechletResponse;
 import com.barry.julien.dialog.ASKCard;
 import com.barry.julien.dialog.Replies;
 
@@ -32,6 +33,10 @@ public enum ResponseFactory
     @Getter
     private final com.amazon.speech.speechlet.SpeechletResponse goodbye =
             newTellResponse(GOODBYE, ASKCard.EXIT);
+
+    @Getter
+    private final SpeechletResponse checker =
+            newTellResponse(CHECKER, ASKCard.EXIT);
 
     /**
      * newAskResponse - Method for creating the Ask response with default prompt

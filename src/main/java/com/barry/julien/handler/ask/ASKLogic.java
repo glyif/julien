@@ -89,6 +89,11 @@ class ASKLogic
         }),
 
 
+        /**
+         * CheckerIntent returns state of checker
+         */
+
+        CHECKER("CheckerIntent", RESPONSE_FACTORY::getChecker),
 
         /**
          * HelpIntent returns help message.

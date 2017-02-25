@@ -32,6 +32,7 @@ public enum Replies
 
     CONTAINER_NOT_SET(INCOMPLETE_COMMAND_PATTERN.format("container")),
 
+    CHECKER("I'm sorry, but the checker is broken"),
 
     NO_CONTAINERS_FOUND_PATTERN("No containers found on %s environment."),
 

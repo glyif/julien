@@ -1,0 +1,34 @@
+{
+  "intents": [
+    {
+      "intent": "ListIntent",
+      "slots": [
+        {
+          "name": "TargetEnv",
+          "type": "ENV"
+        }
+      ]
+    },
+    {
+      "intent": "ListRunningIntent",
+      "slots": [
+        {
+          "name": "TargetEnv",
+          "type": "ENV"
+        }
+      ]
+    },
+    {
+      "intent": "CheckerIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    }
+  ]
+}

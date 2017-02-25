@@ -1,0 +1,22 @@
+ListIntent list my containers on {TargetEnv} environment
+ListIntent list my containers on {TargetEnv}
+ListIntent list all containers on {TargetEnv} environment
+ListIntent list all containers on {TargetEnv}
+ListIntent what containers do I have on {TargetEnv} environment
+ListIntent what containers do I have on {TargetEnv}
+ListIntent list docker containers on {TargetEnv} environment
+ListIntent list docker containers on {TargetEnv}
+ListIntent list all of my docker containers on {TargetEnv} environment
+ListIntent list all of my docker containers on {TargetEnv}
+
+ListRunningIntent what containers are running on {TargetEnv}
+ListRunningIntent what containers are running on {TargetEnv} environment
+ListRunningIntent what containers do I have running on {TargetEnv}
+ListRunningIntent what containers do I have running on {TargetEnv} environment
+
+CheckerIntent check question number 1
+CheckerIntent check question number 2
+CheckerIntent check question number 3
+CheckerIntent check question number 4
+CheckerIntent check question number 5
+CheckerIntent check question number 6
