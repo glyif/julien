@@ -49,9 +49,9 @@ ShutdownIntent shut down {Container} docker container on {TargetEnv}
 ShutdownIntent shut down {Container} container on my {TargetEnv} environment
 ShutdownIntent shut down {Container} docker container on my {TargetEnv} environment
 
-CheckerIntent check question number 1
-CheckerIntent check question number 2
-CheckerIntent check question number 3
-CheckerIntent check question number 4
-CheckerIntent check question number 5
-CheckerIntent check question number 6
+CheckerIntent check question number one
+CheckerIntent check question number two
+CheckerIntent check question number three
+CheckerIntent check question number four
+CheckerIntent check question number five
+CheckerIntent check question number six
