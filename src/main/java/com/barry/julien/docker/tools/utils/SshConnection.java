@@ -1,6 +1,5 @@
 package com.barry.julien.docker.tools.utils;
 
-
 import com.barry.julien.docker.Environment;
 import com.barry.julien.docker.tools.exception.JulienException;
 import com.barry.julien.docker.tools.response.CommandResponse;
@@ -56,7 +55,8 @@ public class SshConnection
      */
 
     public static void close_session(Session session) {
-        if (session != null) {
+        if (session != null)
+        {
             session.disconnect();
         }
     }
