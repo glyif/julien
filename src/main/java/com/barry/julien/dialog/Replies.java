@@ -8,12 +8,26 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public enum Replies
 {
+    LIST_INTENT_EXAMPLE("list all containers on production environment. "),
+
+    REPROMPT("Now, what can I help you with?"),
 
     WELCOME_PROMPT("For instructions on what you can say, please say help me."),
 
+    WELCOME_MESSAGE("Welcome to Dockee. You can ask a question like: "
+            + LIST_INTENT_EXAMPLE.get()
+            + REPROMPT.get()),
+
     CONTAINERS_LIST_PATTERN("Here's full list of your containers on %s environment: %s."),
 
-    RUNNING_CONTAINERS_LIST_PATTERN("Here's full list of your containers currently running on %s environment: %s.");
+    RUNNING_CONTAINERS_LIST_PATTERN("Here's full list of your containers currently running on %s environment: %s."),
+
+
+    HELP_MESSAGE("You can execute voice commands, such as, " + LIST_INTENT_EXAMPLE.get() + REPROMPT.get()),
+
+    HELP_REPROMPT("You can say things like, " + LIST_INTENT_EXAMPLE.get() + REPROMPT.get()),
+
+    GOODBYE("Goodbye...");
 
 
     /**
