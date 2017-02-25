@@ -7,7 +7,6 @@ import com.barry.julien.docker.tools.response.Container;
 import com.barry.julien.docker.Response;
 import com.barry.julien.docker.tools.utils.SshConnection;
 import com.jcraft.jsch.Session;
-import com.sun.tools.doclint.Env;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
@@ -63,7 +62,7 @@ public class DockerApi
 
     private Response getContainers(Environment environment, String command)
     {
-        
+
         try
         {
 
