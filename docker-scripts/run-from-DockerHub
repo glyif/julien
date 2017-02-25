@@ -1,0 +1,6 @@
+#!/bin/bash
+# This commands accepts 1 arg (image_name as named on DockerHub) 
+# $1 = name to assign to image you're pulling from DockerHub
+# typical workflow = run image on staging or production that came from dev
+docker run -it --name $1 -p 8080:8080 larrymadeo/$1
+
