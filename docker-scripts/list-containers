@@ -1,3 +1,0 @@
-#!/bin/bash
-# this script prints out one container name per line ex: determined_torvalds
-sudo docker ps --format "{{.Names}}" | tr '_' ' ' | grep -v NAMES  
