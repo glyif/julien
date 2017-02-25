@@ -1,6 +1,8 @@
 package com.barry.julien.docker.tools;
 
+import com.barry.julien.docker.DockerConnection;
 import com.barry.julien.docker.Environment;
+import com.barry.julien.docker.Request;
 import com.barry.julien.docker.tools.exception.JulienException;
 import com.barry.julien.docker.tools.response.CommandResponse;
 import com.barry.julien.docker.tools.response.Container;
@@ -19,7 +21,7 @@ import java.util.stream.Collectors;
  * Created by gaoqingyang on 2/24/17.
  */
 @Slf4j
-public class DockerApi
+public class DockerApi implements DockerConnection
 {
     private static final String GET_ALL_CONTAINERS_COMMAND = "docker ps -a --format \"{{.Names}}\" | tr '_' ' ' ";
 
@@ -89,6 +91,13 @@ public class DockerApi
         {
             return new Response(e.getMessage(), false);
         }
+
+    }
+
+    public Response getAllContainers(Request request)
+    {
+
+        return getContainers(request.getTargetEnvironment(), GET_ALL_CONTAINERS_COMMAND);
 
     }
 

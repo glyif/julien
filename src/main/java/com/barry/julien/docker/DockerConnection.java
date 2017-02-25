@@ -5,5 +5,6 @@ package com.barry.julien.docker;
  */
 public interface DockerConnection
 {
+    Response getAllContainers(Request request);
 
 }
