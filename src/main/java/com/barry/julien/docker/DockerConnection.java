@@ -10,5 +10,13 @@ public interface DockerConnection
 
     Response getRunningContainers(Request request);
 
+    Response shutDownContainer(Request request);
+
+    Response createContainer(Request request);
+
+    Response deployContainer(Request request);
+
+    Response runContainer(Request request);
+
 
 }

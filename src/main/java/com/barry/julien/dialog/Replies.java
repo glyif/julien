@@ -20,6 +20,14 @@ public enum Replies
 
     CONTAINERS_LIST_PATTERN("Here's full list of your containers on %s environment: %s."),
 
+    SHUTDOWN_SUCCESS_PATTERN("Ok, shutting down container %s on %s environment."),
+
+    RUN_SUCCESS_PATTERN("Ok, launching container %s on %s environment."),
+
+    CREATE_SUCCESS_PATTERN("Ok, creating container %s on %s environment."),
+
+    DEPLOY_SUCCESS_PATTERN("Ok, deploying container %s from %s to %s."),
+
     RUNNING_CONTAINERS_LIST_PATTERN("Here's full list of your containers currently running on %s environment: %s."),
 
     INCOMPLETE_COMMAND_PATTERN("Please, repeat your command. I didn't hear the name of the %s."),

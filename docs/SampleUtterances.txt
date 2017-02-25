@@ -8,6 +8,11 @@ ListIntent list docker containers on {TargetEnv} environment
 ListIntent list docker containers on {TargetEnv}
 ListIntent list all of my docker containers on {TargetEnv} environment
 ListIntent list all of my docker containers on {TargetEnv}
+ListIntent list all containers on {TargetEnv} environment
+ListIntent list all containers on {TargetEnv}
+ListIntent what containers exist on {TargetEnv}
+ListIntent list containers that exist on {TargetEnv}
+
 
 ListRunningIntent what containers are running on {TargetEnv}
 ListRunningIntent what containers are running on {TargetEnv} environment

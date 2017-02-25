@@ -18,6 +18,14 @@ public enum ASKCard
 
     GET_RUNNING_CONTAINERS("Get running containers"),
 
+    SHUTDOWN("Shutting down a container"),
+
+    DEPLOY("Deploying a container"),
+
+    RUN("Running a container"),
+
+    CREATE("Creating a container"),
+
     INCOMPLETE_REQUEST("Request information is insufficient"),
 
     HELP("Help");

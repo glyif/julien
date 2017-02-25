@@ -1,6 +1,7 @@
 package com.barry.julien.handler.ask;
 
 import com.amazon.speech.speechlet.SpeechletResponse;
+import com.barry.julien.dialog.ASKCard;
 import com.barry.julien.docker.DockerConnection;
 import com.barry.julien.docker.Request;
 import lombok.Getter;
@@ -86,6 +87,72 @@ class ASKLogic
                 output = RUNNING_CONTAINERS_LIST_PATTERN.format(envName, message);
             }
             return RESPONSE_FACTORY.newAskResponse(output, GET_RUNNING_CONTAINERS);
+        }),
+
+        /**
+         * Creates container with given name on given environment.
+         */
+        CREATE("CreateIntent", of(TARGET_ENV, CONTAINER_NAME), (request, api) -> {
+            val response = api.createContainer(request);
+            final String output;
+            if (!response.isSuccess()) { //error
+                output = response.getMessage();
+            } else {
+                output = CREATE_SUCCESS_PATTERN
+                        .format(request.getContainer(),
+                                request.getTargetEnvironment().getName());
+            }
+            return RESPONSE_FACTORY.newAskResponse(output, ASKCard.CREATE);
+        }),
+
+        /**
+         * Deploys given container from given source environment to given target environment.
+         */
+        DEPLOY("DeployIntent", of(TARGET_ENV, SOURCE_ENV, CONTAINER_NAME), (request, api) -> {
+            val response = api.deployContainer(request);
+            final String output;
+            if (!response.isSuccess()) { //error
+                output = response.getMessage();
+            } else {
+                output = DEPLOY_SUCCESS_PATTERN
+                        .format(request.getContainer(),
+                                request.getSourceEnvironment().getName(),
+                                request.getTargetEnvironment().getName());
+            }
+            return RESPONSE_FACTORY.newAskResponse(output, ASKCard.DEPLOY);
+        }),
+
+        /**
+         * Launches the given container on given environment.
+         */
+        RUN("RunIntent", of(TARGET_ENV, CONTAINER_NAME), (request, api) -> {
+            val response = api.runContainer(request);
+            final String output;
+            if (!response.isSuccess()) { //error
+                output = response.getMessage();
+            } else {
+                output = RUN_SUCCESS_PATTERN
+                        .format(request.getContainer(),
+                                request.getTargetEnvironment().getName());
+            }
+            return RESPONSE_FACTORY.newAskResponse(output, ASKCard.RUN);
+        }),
+
+
+        /**
+         * Shuts down the given container on given environment.
+         */
+        SHUTDOWN("ShutdownIntent", of(TARGET_ENV, CONTAINER_NAME), (request, api) -> {
+            val response = api.shutDownContainer(request);
+            final String output;
+            if (!response.isSuccess()) { //error
+                output = response.getMessage();
+            } else {
+                output = SHUTDOWN_SUCCESS_PATTERN
+                        .format(request.getContainer(),
+                                request.getTargetEnvironment().getName());
+            }
+            return RESPONSE_FACTORY.newAskResponse(output, ASKCard.SHUTDOWN);
         }),
 
 
