@@ -1,13 +1,13 @@
 package com.barry.julien.docker;
 
-import lombok.Getter;
+import lombok.Builder;
 import lombok.Value;
 
 /**
  * Created by gaoqingyang on 2/24/17.
  */
 @Value
-@Getter
+@Builder
 public final class Request
 {
 

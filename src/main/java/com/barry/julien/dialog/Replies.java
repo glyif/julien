@@ -22,6 +22,20 @@ public enum Replies
 
     RUNNING_CONTAINERS_LIST_PATTERN("Here's full list of your containers currently running on %s environment: %s."),
 
+    INCOMPLETE_COMMAND_PATTERN("Please, repeat your command. I didn't hear the name of the %s."),
+
+    TARGET_ENV_NOT_SET(INCOMPLETE_COMMAND_PATTERN.format("target environment")),
+
+    SOURCE_ENV_NOT_SET(INCOMPLETE_COMMAND_PATTERN.format("source environment")),
+
+    ENV_NOT_SET(INCOMPLETE_COMMAND_PATTERN.format("environment")),
+
+    CONTAINER_NOT_SET(INCOMPLETE_COMMAND_PATTERN.format("container")),
+
+
+    NO_CONTAINERS_FOUND_PATTERN("No containers found on %s environment."),
+
+    NO_RUNNING_CONTAINERS_FOUND_PATTERN("No running containers found on %s environment."),
 
     HELP_MESSAGE("You can execute voice commands, such as, " + LIST_INTENT_EXAMPLE.get() + REPROMPT.get()),
 

@@ -18,6 +18,8 @@ public enum ASKCard
 
     GET_RUNNING_CONTAINERS("Get running containers"),
 
+    INCOMPLETE_REQUEST("Request information is insufficient"),
+
     HELP("Help");
 
 

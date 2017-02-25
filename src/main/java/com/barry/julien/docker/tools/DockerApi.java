@@ -31,7 +31,10 @@ public class DockerApi implements DockerConnection
 
         String[] parameters = containerInfo.split(" ");
 
-        return (Container.builder().name(parameters[0]).imageName(parameters[1]).build());
+        return (Container.builder()
+                .name(parameters[0])
+                .imageName(parameters[1])
+                .build());
 
     }
 
