@@ -13,13 +13,16 @@ ListRunningIntent what containers are running on {TargetEnv}
 ListRunningIntent what containers are running on {TargetEnv} environment
 ListRunningIntent what containers do I have running on {TargetEnv}
 ListRunningIntent what containers do I have running on {TargetEnv} environment
+ListRunningIntent list running containers on {TargetEnv} environment
 
 CreateIntent create container {Container} on {TargetEnv}
 CreateIntent create {Container} container on {TargetEnv}
-CreateIntent create a {Container} container on {TargetEnv}
+CreateIntent create an apline container called {Container} on {TargetEnv}
 CreateIntent create a {Container} docker container on {TargetEnv}
 CreateIntent create a {Container} container on {TargetEnv} environment
 CreateIntent create a {Container} docker container on {TargetEnv} environment
+CreateIntent create an apline container called {Container} container on {TargetEnv}
+CreateIntent create an apline container called {Container} docker container on {TargetEnv}
 
 RunIntent run {Container} on {TargetEnv}
 RunIntent run {Container} container on {TargetEnv}
@@ -48,10 +51,3 @@ ShutdownIntent shut down {Container} container on {TargetEnv}
 ShutdownIntent shut down {Container} docker container on {TargetEnv}
 ShutdownIntent shut down {Container} container on my {TargetEnv} environment
 ShutdownIntent shut down {Container} docker container on my {TargetEnv} environment
-
-CheckerIntent check question number one
-CheckerIntent check question number two
-CheckerIntent check question number three
-CheckerIntent check question number four
-CheckerIntent check question number five
-CheckerIntent check question number six
