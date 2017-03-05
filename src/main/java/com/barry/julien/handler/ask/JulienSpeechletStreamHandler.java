@@ -16,7 +16,7 @@ public class JulienSpeechletStreamHandler extends SpeechletRequestStreamHandler 
          * This Id can be found on https://developer.amazon.com/edw/home.html#/ "Edit" the relevant
          * Alexa Skill and put the relevant Application Ids in this Set.
          */
-        supportedApplicationIds.add("amzn1.ask.skill.8e8abb05-380f-411e-aec3-7a0a2ab77d0a");
+        supportedApplicationIds.add("APPIDHERE");
     }
 
     public JulienSpeechletStreamHandler() {
