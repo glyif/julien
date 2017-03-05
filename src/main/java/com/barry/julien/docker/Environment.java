@@ -15,17 +15,17 @@ import java.util.Optional;
 public enum Environment
 {
 
-    DEVELOPMENT("45.55.21.198", "development"),
-    STAGING("45.55.21.208", "staging"),
-    PRODUCTION("104.236.179.196", "production");
+    DEVELOPMENT("IP ADDRESS HERE", "development"),
+    STAGING("IP ADDRESS HERE", "staging"),
+    PRODUCTION("IPADDRESS HERE", "production");
 
     private final String ip;
 
     private final String name;
 
-    private final String user = "root";
+    private final String user = "";
 
-    private final String password = "Alexa123&";
+    private final String password = "";
 
     public static Optional<Environment> getByName(String name)
     {
