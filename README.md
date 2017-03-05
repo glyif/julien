@@ -9,8 +9,8 @@ Julien takes in differnet server env that's defined in the code and runs a scrip
 
 ## Setup
 ### Define Envs
-1) Setup Envs in `src/main/java/com/barry/julien/docker/Enviornment.java` file.
-2) run the command `gradle shadowJar` in the root folder
+1. Setup Envs in `src/main/java/com/barry/julien/docker/Enviornment.java` file.
+2. Run the command `gradle shadowJar` in the root folder
 
 ### AWS Lambda Setup
 1. Go to the AWS Console and click on the Lambda link. Note: ensure you are in us-east or you wont be able to use Alexa with Lambda.
