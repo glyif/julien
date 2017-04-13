@@ -5,11 +5,11 @@ Julien is your personal docker assistant made to help you with your Docker dev o
 
 Julien was built in 24 hours at Docker Hackathon at Holberton School.
 
-Julien takes in differnet server env that's defined in the code and runs a script/command in it. Then the request is returned to Alexa that reads it back.
+Julien takes in different server env that's defined in the code and runs a script/command in it. Then the request is returned to Alexa that reads it back.
 
 ## Setup
 ### Define Envs
-1. Setup Envs in `src/main/java/com/barry/julien/docker/Enviornment.java` file.
+1. Setup Envs in `src/main/java/com/barry/julien/docker/Environment.java` file.
 2. Run the command `gradle shadowJar` in the root folder
 
 ### AWS Lambda Setup
@@ -43,9 +43,9 @@ Julien takes in differnet server env that's defined in the code and runs a scrip
 ## Examples
 ### One-shot model:
     User: "Alexa, ask julien to list containers on development."
-    Alexa: "Here's a list of containers on the development enviornment:...."
+    Alexa: "Here's a list of containers on the development environment:...."
 
-## Contributers
+## Contributors
 [@glyif](https://github.com/glyif)
 
 [@Hillmonkey](https://github.com/Hillmonkey)
